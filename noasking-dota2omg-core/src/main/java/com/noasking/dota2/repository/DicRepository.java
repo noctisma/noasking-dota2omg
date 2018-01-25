@@ -1,6 +1,6 @@
-package com.noasking.dota2.clawer.repository;
+package com.noasking.dota2.repository;
 
-import com.noasking.dota2.clawer.entity.DicEntity;
+import com.noasking.dota2.entity.DicEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 

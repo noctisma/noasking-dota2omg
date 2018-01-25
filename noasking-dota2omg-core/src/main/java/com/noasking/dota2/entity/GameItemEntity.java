@@ -1,4 +1,4 @@
-package com.noasking.dota2.clawer.entity;
+package com.noasking.dota2.entity;
 
 import lombok.Data;
 

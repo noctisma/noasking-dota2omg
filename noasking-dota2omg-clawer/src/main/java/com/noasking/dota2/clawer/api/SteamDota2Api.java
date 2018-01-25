@@ -4,11 +4,9 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.PropertyNamingStrategy;
 import com.noasking.dota2.clawer.config.JobProperties;
-import com.noasking.dota2.clawer.entity.GameItemEntity;
-import com.noasking.dota2.clawer.entity.HeroEntity;
-import com.noasking.dota2.clawer.entity.MatchEntity;
+import com.noasking.dota2.entity.GameItemEntity;
+import com.noasking.dota2.entity.HeroEntity;
 import com.noasking.dota2.clawer.model.match.Match;
-import com.noasking.dota2.clawer.repository.MatchRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,9 +28,6 @@ public class SteamDota2Api {
 
     @Autowired
     private RestTemplate restTemplate;
-
-    @Autowired
-    private MatchRepository matchRepository;
 
     @Autowired
     private JobProperties jobProperties;
@@ -103,14 +98,7 @@ public class SteamDota2Api {
         if ("1".endsWith(status)) {
             Iterator<JsonNode> jsonNodeIterable = result.get("matches").elements();
             List<Match> saleOrderItems = new ArrayList<Match>();
-            while (jsonNodeIterable.hasNext()) {
-                JsonNode jsonNode = jsonNodeIterable.next();
-                MatchEntity matchEntity = new MatchEntity();
-                matchEntity.setMatchId(jsonNode.get("match_id").asLong());
-                matchEntity.setMatchSeqNum(jsonNode.get("match_seq_num").asLong());
-                matchEntity.setStatus("C");
-                matchRepository.save(matchEntity);
-            }
+
         }
     }
 

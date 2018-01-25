@@ -1,8 +1,8 @@
 package com.noasking.dota2.clawer.service;
 
 import com.noasking.dota2.clawer.api.ApiConst;
-import com.noasking.dota2.clawer.entity.DicEntity;
-import com.noasking.dota2.clawer.repository.DicRepository;
+import com.noasking.dota2.entity.DicEntity;
+import com.noasking.dota2.repository.DicRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;

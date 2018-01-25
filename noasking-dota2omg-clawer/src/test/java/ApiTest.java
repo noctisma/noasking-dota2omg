@@ -1,14 +1,11 @@
-import com.noasking.dota2.clawer.ClawerDota2Application;
+import com.noasking.dota2.ClawerDota2Application;
 import com.noasking.dota2.clawer.api.SteamDota2Api;
-import com.noasking.dota2.clawer.entity.DicEntity;
-import com.noasking.dota2.clawer.entity.GameItemEntity;
-import com.noasking.dota2.clawer.entity.HeroEntity;
-import com.noasking.dota2.clawer.entity.MatchEntity;
-import com.noasking.dota2.clawer.repository.DicRepository;
-import com.noasking.dota2.clawer.repository.GameItemRepository;
-import com.noasking.dota2.clawer.repository.HeroRepository;
-import com.noasking.dota2.clawer.repository.MatchRepository;
-import com.noasking.dota2.clawer.service.MatchService;
+import com.noasking.dota2.entity.DicEntity;
+import com.noasking.dota2.entity.GameItemEntity;
+import com.noasking.dota2.entity.HeroEntity;
+import com.noasking.dota2.repository.DicRepository;
+import com.noasking.dota2.repository.GameItemRepository;
+import com.noasking.dota2.repository.HeroRepository;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
@@ -41,9 +38,6 @@ public class ApiTest {
 
     @Autowired
     private HeroRepository heroRepository;
-
-    @Autowired
-    private MatchRepository matchRepository;
 
     /**
      * 导入游戏物品
@@ -151,18 +145,6 @@ public class ApiTest {
         }
     }
 
-    @Autowired
-    private MatchService matchService;
-
-    @Test
-    public void testTransMatch() throws IOException {
-        List<MatchEntity> matchEntityList = matchRepository.findAll();
-        int i = 0;
-        for (MatchEntity match : matchEntityList) {
-            System.out.println(i++);
-            matchService.transMatch(match.getDetail());
-        }
-    }
 
 
     class MyThread2 extends Thread {

@@ -2,8 +2,8 @@ package com.noasking.dota2.clawer.config;
 
 import com.noasking.dota2.clawer.api.ApiConst;
 import com.noasking.dota2.clawer.api.SteamDota2Api;
-import com.noasking.dota2.clawer.entity.DicEntity;
-import com.noasking.dota2.clawer.repository.DicRepository;
+import com.noasking.dota2.entity.DicEntity;
+import com.noasking.dota2.repository.DicRepository;
 import com.noasking.dota2.clawer.service.DicService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
