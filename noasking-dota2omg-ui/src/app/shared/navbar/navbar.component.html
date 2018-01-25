@@ -1,0 +1,31 @@
+<nav class="navbar navbar-expand-lg fixed-top navbar-transparent" color-on-scroll="500">
+    <div class="container">
+        <div class="navbar-translate">
+            <a class="navbar-brand" href="/index">Dota2 OMG</a>
+            <button class="navbar-toggler navbar-burger" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation" (click)="sidebarToggle()">
+                <span class="navbar-toggler-bar"></span>
+                <span class="navbar-toggler-bar"></span>
+                <span class="navbar-toggler-bar"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarToggler">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item" *ngIf="!isDocumentation()">
+                    <a href="/index" class="nav-link"> 首页</a>
+                </li>
+                <li class="nav-item" *ngIf="!isDocumentation()">
+                    <a href="/hero" class="nav-link"> 英雄</a>
+                </li>
+                <li class="nav-item" *ngIf="!isDocumentation()">
+                    <a href="/ability" class="nav-link"> 技能</a>
+                </li>
+                <li class="nav-item" *ngIf="!isDocumentation()">
+                    <a href="/pickhelper" class="nav-link"> OMG技能选择器</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="page-header page-header-xs" data-parallax="true" style="background-image: url('../assets/img/dota2_hedao.jpg');">
+    <div class="filter"></div>
+</div>

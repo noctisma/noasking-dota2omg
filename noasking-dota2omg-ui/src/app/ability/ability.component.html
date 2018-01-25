@@ -1,0 +1,83 @@
+<div class="wrapper">
+    <div class="section profile-content">
+        <div class="container">
+            <div class="owner">
+                <div class="avatar">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 ml-auto mr-auto text-center">
+                    <p></p>
+                    <h2>技能胜率排行榜</h2>
+                    <br/>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-sm-2  ml-auto text-center">
+                </div>
+                <div class="col-sm-8 ml-auto mr-auto text-center">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="请选择英雄" (keyup)='updateFilter($event)'>
+                    </div>
+                </div>
+                <div class="col-sm-2  ml-auto text-center">
+                    <div ngbDropdown placement="bottom-right" class="d-inline-block">
+                        <button class="btn btn-outline-primary" id="dropdownBasic2" ngbDropdownToggle>{{dropdownValue}}
+                        </button>
+                        <div ngbDropdownMenu aria-labelledby="dropdownBasic2">
+                            <button class="dropdown-item" (click)="rebuild('7天')">7天</button>
+                            <button class="dropdown-item" (click)="rebuild('一个月')">一个月</button>
+                            <button class="dropdown-item" (click)="rebuild('全部')">全部</button>
+                        </div>
+                    </div>
+                </div>
+                <!--<div class="col-sm-4 mr-auto text-center">-->
+
+                <!--</div>-->
+
+            </div>
+
+
+            <br/>
+            <div class="nav-tabs-navigation">
+                <div class="nav-tabs-wrapper">
+                    <ngx-datatable
+                            class="bootstrap"
+                            [rows]="rows"
+                            [loadingIndicator]="loadingIndicator"
+                            [columnMode]="'force'"
+                            [headerHeight]="40"
+                            [footerHeight]="40"
+                            [limit]="10"
+                            [rowHeight]="auto"
+                            [reorderable]="reorderable">
+                        <ngx-datatable-column name="Age">
+                            <ng-template ngx-datatable-cell-template let-value="value">
+                                <p class="text-center"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/axe_sb.png" alt="Circle Image">斧王</p>
+                            </ng-template>
+                        </ngx-datatable-column>
+                        <ngx-datatable-column name="Name">
+                            <ng-template ngx-datatable-cell-template let-value="value">
+                                <p class="text-center">{{value}}</p>
+                            </ng-template>
+                        </ngx-datatable-column>
+                        <ngx-datatable-column name="Gender">
+                            <ng-template ngx-datatable-cell-template let-value="value">
+                                <p class="text-center">{{value}}</p>
+                            </ng-template>
+                        </ngx-datatable-column>
+                        <ngx-datatable-column name="Age">
+                            <ng-template ngx-datatable-cell-template let-value="value">
+                                <p class="text-center">{{value}}</p>
+                            </ng-template>
+                        </ngx-datatable-column>
+                    </ngx-datatable>
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

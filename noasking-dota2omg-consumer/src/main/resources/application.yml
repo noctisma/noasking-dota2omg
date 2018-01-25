@@ -1,0 +1,15 @@
+spring:
+#  kafka:
+#    bootstrap-servers: 10.10.10.21:6667,10.10.10.22:6667
+#    consumer:
+#      group-id: myGroup
+#    template:
+#      default-topic: my-replicated-topic
+#    listener:
+#      concurrency: 3
+#    producer:
+#      batch-size: 1000
+  kafka:
+    bootstrap-servers: 10.10.10.21:6667,10.10.10.22:6667
+    consumer:
+      group-id: test-consumer-group

@@ -1,0 +1,45 @@
+<div class="section">
+    <div class="container">
+        <div class="nav-tabs-navigation shadow">
+            <div class="nav-tabs-wrapper">
+                <ngb-tabset [justify]="'center'">
+                    <ngb-tab title="Follows">
+                        <ng-template ngbTabContent>
+                            <div class="row following" id="follows">
+                                <div class="col-md-12 ml-auto mr-auto">
+                                    <ul class="list-unstyled follows">
+                                        <li *ngFor="let data of _dataSet">
+                                            <div class="row">
+                                                <div class="col-md-2 col-sm-2 ml-auto mr-auto">
+                                                    <img src="{{'http://cdn.dota2.com/apps/dota2/images/heroes/'+data.name+'_lg.png'}}"
+                                                         alt="Circle Image"
+                                                         class="img-no-padding img-responsive">
+                                                </div>
+                                                <div class="col-md-5 col-sm-4 ml-auto">
+                                                    <h5>{{data.localized_name}}
+                                                        <small>{{data.radio}}</small>
+                                                    </h5>
+                                                </div>
+                                                <div class="col-md-1 col-sm-2 ml-auto mr-auto">
+                                                    {{data.time}}
+                                                </div>
+                                            </div>
+                                            <hr/>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </ng-template>
+                    </ngb-tab>
+                    <ngb-tab title="Following">
+                        <ng-template ngbTabContent>
+                            <h3 class="text-muted">Not following anyone yet :(</h3>
+                            <br>
+                            <button class="btn btn-warning btn-round">Find artists</button>
+                        </ng-template>
+                    </ngb-tab>
+                </ngb-tabset>
+            </div>
+        </div>
+    </div>
+</div>

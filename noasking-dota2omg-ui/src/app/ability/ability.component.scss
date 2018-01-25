@@ -1,0 +1,257 @@
+//
+//ngx-datatable {
+//  display: block; }
+//ngx-datatable {
+//  border-collapse: collapse;
+//  overflow: hidden;
+//  display: none; }
+//ngx-datatable > .m-datatable__head,
+//ngx-datatable > .m-datatable__body,
+//ngx-datatable > .m-datatable__foot {
+//  visibility: hidden;
+//  display: block; }
+//ngx-datatable > .m-datatable__head .m-datatable__row,
+//ngx-datatable > .m-datatable__body .m-datatable__row,
+//ngx-datatable > .m-datatable__foot .m-datatable__row {
+//  width: 100%; }
+//ngx-datatable > .m-datatable__head .m-datatable__row > .m-datatable__cell,
+//ngx-datatable > .m-datatable__body .m-datatable__row > .m-datatable__cell,
+//ngx-datatable > .m-datatable__foot .m-datatable__row > .m-datatable__cell {
+//  vertical-align: middle;
+//  padding: 11px 10px;
+//  font-size: 1rem; }
+//ngx-datatable > .m-datatable__head .m-datatable__row > .m-datatable__cell i,
+//ngx-datatable > .m-datatable__body .m-datatable__row > .m-datatable__cell i,
+//ngx-datatable > .m-datatable__foot .m-datatable__row > .m-datatable__cell i {
+//  font-size: 1.3rem; }
+//ngx-datatable > .m-datatable__head .m-datatable__row > .m-datatable__cell.m-datatable__cell--left,
+//ngx-datatable > .m-datatable__body .m-datatable__row > .m-datatable__cell.m-datatable__cell--left,
+//ngx-datatable > .m-datatable__foot .m-datatable__row > .m-datatable__cell.m-datatable__cell--left {
+//  text-align: left; }
+//ngx-datatable > .m-datatable__head .m-datatable__row > .m-datatable__cell.m-datatable__cell--left > span,
+//ngx-datatable > .m-datatable__body .m-datatable__row > .m-datatable__cell.m-datatable__cell--left > span,
+//ngx-datatable > .m-datatable__foot .m-datatable__row > .m-datatable__cell.m-datatable__cell--left > span {
+//  text-align: left; }
+//ngx-datatable > .m-datatable__head .m-datatable__row > .m-datatable__cell.m-datatable__cell--right,
+//ngx-datatable > .m-datatable__body .m-datatable__row > .m-datatable__cell.m-datatable__cell--right,
+//ngx-datatable > .m-datatable__foot .m-datatable__row > .m-datatable__cell.m-datatable__cell--right {
+//  text-align: right; }
+//ngx-datatable > .m-datatable__head .m-datatable__row > .m-datatable__cell.m-datatable__cell--right > span,
+//ngx-datatable > .m-datatable__body .m-datatable__row > .m-datatable__cell.m-datatable__cell--right > span,
+//ngx-datatable > .m-datatable__foot .m-datatable__row > .m-datatable__cell.m-datatable__cell--right > span {
+//  text-align: right; }
+//ngx-datatable > .m-datatable__head .m-datatable__row > .m-datatable__cell.m-datatable__cell--center,
+//ngx-datatable > .m-datatable__body .m-datatable__row > .m-datatable__cell.m-datatable__cell--center,
+//ngx-datatable > .m-datatable__foot .m-datatable__row > .m-datatable__cell.m-datatable__cell--center {
+//  text-align: center; }
+//ngx-datatable > .m-datatable__head .m-datatable__row > .m-datatable__cell.m-datatable__cell--center > span,
+//ngx-datatable > .m-datatable__body .m-datatable__row > .m-datatable__cell.m-datatable__cell--center > span,
+//ngx-datatable > .m-datatable__foot .m-datatable__row > .m-datatable__cell.m-datatable__cell--center > span {
+//  text-align: center; }
+//ngx-datatable > .m-datatable__head .m-datatable__row > .m-datatable__cell.m-datatable__cell--sort,
+//ngx-datatable > .m-datatable__body .m-datatable__row > .m-datatable__cell.m-datatable__cell--sort,
+//ngx-datatable > .m-datatable__foot .m-datatable__row > .m-datatable__cell.m-datatable__cell--sort {
+//  cursor: pointer; }
+//ngx-datatable > .m-datatable__head .m-datatable__row > .m-datatable__cell.m-datatable__cell--resizing,
+//ngx-datatable > .m-datatable__body .m-datatable__row > .m-datatable__cell.m-datatable__cell--resizing,
+//ngx-datatable > .m-datatable__foot .m-datatable__row > .m-datatable__cell.m-datatable__cell--resizing {
+//  cursor: col-resize; }
+//ngx-datatable > .m-datatable__head .m-datatable__row > .m-datatable__cell > span,
+//ngx-datatable > .m-datatable__body .m-datatable__row > .m-datatable__cell > span,
+//ngx-datatable > .m-datatable__foot .m-datatable__row > .m-datatable__cell > span {
+//  display: block;
+//  overflow: hidden;
+//  text-overflow: ellipsis; }
+//ngx-datatable > .m-datatable__head .m-datatable__row > .m-datatable__cell.m-datatable__cell--check > span,
+//ngx-datatable > .m-datatable__body .m-datatable__row > .m-datatable__cell.m-datatable__cell--check > span,
+//ngx-datatable > .m-datatable__foot .m-datatable__row > .m-datatable__cell.m-datatable__cell--check > span {
+//  overflow: visible; }
+//ngx-datatable > .m-datatable__head .m-datatable__row > .m-datatable__cell.m-datatable__cell--check > span > .m-checkbox,
+//ngx-datatable > .m-datatable__body .m-datatable__row > .m-datatable__cell.m-datatable__cell--check > span > .m-checkbox,
+//ngx-datatable > .m-datatable__foot .m-datatable__row > .m-datatable__cell.m-datatable__cell--check > span > .m-checkbox {
+//  top: 2px;
+//  padding: 0;
+//  margin: 0 0 0 0; }
+//ngx-datatable > .m-datatable__head .m-datatable__row > .m-datatable__cell .dropdown,
+//ngx-datatable > .m-datatable__body .m-datatable__row > .m-datatable__cell .dropdown,
+//ngx-datatable > .m-datatable__foot .m-datatable__row > .m-datatable__cell .dropdown {
+//  display: inline-block; }
+//ngx-datatable > .m-datatable__head .m-datatable__row > .m-datatable__cell .dropdown .dropdown-menu,
+//ngx-datatable > .m-datatable__body .m-datatable__row > .m-datatable__cell .dropdown .dropdown-menu,
+//ngx-datatable > .m-datatable__foot .m-datatable__row > .m-datatable__cell .dropdown .dropdown-menu {
+//  margin-top: 0.5rem; }
+//ngx-datatable > .m-datatable__head .m-datatable__row > .m-datatable__cell .dropdown.dropup .dropdown-menu,
+//ngx-datatable > .m-datatable__body .m-datatable__row > .m-datatable__cell .dropdown.dropup .dropdown-menu,
+//ngx-datatable > .m-datatable__foot .m-datatable__row > .m-datatable__cell .dropdown.dropup .dropdown-menu {
+//  margin-top: auto;
+//  margin-bottom: 0.5rem; }
+//ngx-datatable > .m-datatable__head .m-datatable__row > .m-datatable__cell .dropdown .dropdown-menu.dropdown-menu-right,
+//ngx-datatable > .m-datatable__body .m-datatable__row > .m-datatable__cell .dropdown .dropdown-menu.dropdown-menu-right,
+//ngx-datatable > .m-datatable__foot .m-datatable__row > .m-datatable__cell .dropdown .dropdown-menu.dropdown-menu-right {
+//  margin-right: -0.8rem; }
+//ngx-datatable > .m-datatable__head .m-datatable__row > .m-datatable__cell .dropdown .dropdown-menu.dropdown-menu-left,
+//ngx-datatable > .m-datatable__body .m-datatable__row > .m-datatable__cell .dropdown .dropdown-menu.dropdown-menu-left,
+//ngx-datatable > .m-datatable__foot .m-datatable__row > .m-datatable__cell .dropdown .dropdown-menu.dropdown-menu-left {
+//  margin-left: -0.8rem; }
+//ngx-datatable > .m-datatable__head > .m-datatable__lock,
+//ngx-datatable > .m-datatable__body > .m-datatable__lock,
+//ngx-datatable > .m-datatable__foot > .m-datatable__lock {
+//  border: 0; }
+//ngx-datatable > .m-datatable__head .m-datatable__row > .m-datatable__cell,
+//ngx-datatable > .m-datatable__foot .m-datatable__row > .m-datatable__cell {
+//  font-weight: 600;
+//  vertical-align: middle; }
+//ngx-datatable > .m-datatable__head .m-datatable__row > .m-datatable__cell {
+//  padding: 16px 10px; }
+//ngx-datatable > .m-datatable__head .m-datatable__row > .m-datatable__cell > span > i {
+//  display: inline-block;
+//  position: relative;
+//  right: -10px;
+//  line-height: 0;
+//  vertical-align: middle;
+//  font-size: 1.1rem; }
+//ngx-datatable > .m-datatable__body .m-datatable__row > .m-datatable__cell.m-datatable__cell--check > span > .m-checkbox {
+//  top: 1px; }
+//ngx-datatable.m-datatable--error .m-datatable__body {
+//  padding: 30px;
+//  text-align: center; }
+//ngx-datatable.m-datatable--lock > .m-datatable__head > .m-datatable__lock,
+//ngx-datatable.m-datatable--lock > .m-datatable__body > .m-datatable__lock,
+//ngx-datatable.m-datatable--lock > .m-datatable__foot > .m-datatable__lock {
+//  display: inline-block;
+//  position: relative;
+//  vertical-align: top;
+//  overflow: hidden; }
+//ngx-datatable.m-datatable--loaded {
+//  display: block; }
+//ngx-datatable.m-datatable--loaded {
+//  display: block; }
+//ngx-datatable.m-datatable--loaded > .m-datatable__head,
+//ngx-datatable.m-datatable--loaded > .m-datatable__body,
+//ngx-datatable.m-datatable--loaded > .m-datatable__foot {
+//  visibility: visible;
+//  display: block; }
+//ngx-datatable.m-datatable--loaded > .m-datatable__head .m-datatable__row,
+//ngx-datatable.m-datatable--loaded > .m-datatable__body .m-datatable__row,
+//ngx-datatable.m-datatable--loaded > .m-datatable__foot .m-datatable__row {
+//  display: table;
+//  table-layout: initial; }
+//ngx-datatable.m-datatable--loaded > .m-datatable__head .m-datatable__row > .m-datatable__cell,
+//ngx-datatable.m-datatable--loaded > .m-datatable__body .m-datatable__row > .m-datatable__cell,
+//ngx-datatable.m-datatable--loaded > .m-datatable__foot .m-datatable__row > .m-datatable__cell {
+//  display: table-cell; }
+//ngx-datatable.m-datatable--subtable > .m-datatable__head .m-datatable__row,
+//ngx-datatable.m-datatable--subtable > .m-datatable__body .m-datatable__row,
+//ngx-datatable.m-datatable--subtable > .m-datatable__foot .m-datatable__row {
+//  width: 100%; }
+//ngx-datatable.m-datatable--subtable > .m-datatable__head .m-datatable__toggle-subtable > i,
+//ngx-datatable.m-datatable--subtable > .m-datatable__body .m-datatable__toggle-subtable > i,
+//ngx-datatable.m-datatable--subtable > .m-datatable__foot .m-datatable__toggle-subtable > i {
+//  line-height: 0;
+//  font-size: 1.3rem; }
+//ngx-datatable.m-datatable--subtable > .m-datatable__head .m-datatable__toggle-subtable:hover,
+//ngx-datatable.m-datatable--subtable > .m-datatable__body .m-datatable__toggle-subtable:hover,
+//ngx-datatable.m-datatable--subtable > .m-datatable__foot .m-datatable__toggle-subtable:hover {
+//  text-decoration: none; }
+//ngx-datatable.m-datatable--subtable > .m-datatable__head .m-datatable__row-detail,
+//ngx-datatable.m-datatable--subtable > .m-datatable__body .m-datatable__row-detail,
+//ngx-datatable.m-datatable--subtable > .m-datatable__foot .m-datatable__row-detail {
+//  display: table;
+//  width: 100%; }
+//ngx-datatable.m-datatable--subtable > .m-datatable__head .m-datatable__row-detail > .m-datatable__detail,
+//ngx-datatable.m-datatable--subtable > .m-datatable__body .m-datatable__row-detail > .m-datatable__detail,
+//ngx-datatable.m-datatable--subtable > .m-datatable__foot .m-datatable__row-detail > .m-datatable__detail {
+//  padding: 20px; }
+//ngx-datatable.m-datatable--scroll {
+//  display: block; }
+//ngx-datatable.m-datatable--scroll > .m-datatable__head,
+//ngx-datatable.m-datatable--scroll > .m-datatable__foot {
+//  overflow: hidden; }
+//ngx-datatable.m-datatable--scroll > .m-datatable__head .m-datatable__row,
+//ngx-datatable.m-datatable--scroll > .m-datatable__foot .m-datatable__row {
+//  position: relative; }
+//ngx-datatable.m-datatable--scroll > .m-datatable__body {
+//  overflow: hidden; }
+//ngx-datatable > .m-datatable__pager {
+//  margin-top: 20px; }
+//ngx-datatable > .m-datatable__pager.m-datatable__pager--top {
+//  margin-bottom: 20px; }
+//ngx-datatable > .m-datatable__pager > .m-datatable__pager-nav {
+//  margin: 10px 0 0 0;
+//  padding: 0;
+//  display: inline-block; }
+//ngx-datatable > .m-datatable__pager > .m-datatable__pager-nav > li {
+//  padding: 0;
+//  margin-right: 5px;
+//  display: inline-block; }
+//ngx-datatable > .m-datatable__pager > .m-datatable__pager-nav > li:last-child {
+//  margin-right: 0; }
+//ngx-datatable > .m-datatable__pager > .m-datatable__pager-nav > li > .m-datatable__pager-link {
+//  cursor: pointer;
+//  display: inline-block;
+//  height: 2.25rem;
+//  width: 2.25rem;
+//  vertical-align: middle;
+//  padding: 0;
+//  -webkit-border-radius: 50%;
+//  -moz-border-radius: 50%;
+//  -ms-border-radius: 50%;
+//  -o-border-radius: 50%;
+//  border-radius: 50%;
+//  text-align: center;
+//  position: relative;
+//  display: -webkit-box;
+//  /* OLD - iOS 6-, Safari 3.1-6 */
+//  display: -moz-box;
+//  /* OLD - Firefox 19- (buggy but mostly works) */
+//  display: -ms-flexbox;
+//  /* TWEENER - IE 10 */
+//  display: -webkit-flex;
+//  /* NEW - Chrome */
+//  display: flex;
+//  -webkit-justify-content: center;
+//  -moz-justify-content: center;
+//  -ms-justify-content: center;
+//  justify-content: center;
+//  -webkit-align-items: center;
+//  -moz-align-items: center;
+//  -ms-align-items: center;
+//  align-items: center;
+//  text-align: center;
+//  vertical-align: middle;
+//  font-size: 1rem;
+//  line-height: 1rem;
+//  font-weight: 400; }
+//ngx-datatable > .m-datatable__pager > .m-datatable__pager-nav > li > .m-datatable__pager-link > i {
+//  font-size: 1rem;
+//  text-align: center;
+//  display: inline-block; }
+//ngx-datatable > .m-datatable__pager > .m-datatable__pager-nav > li > .m-datatable__pager-link.m-datatable__pager-link--more-prev, ngx-datatable > .m-datatable__pager > .m-datatable__pager-nav > li > .m-datatable__pager-link.m-datatable__pager-link--more-next {
+//  font-weight: 600; }
+//ngx-datatable > .m-datatable__pager > .m-datatable__pager-nav > li > .m-pager-input {
+//  height: 2.25rem;
+//  width: 3.5rem;
+//  text-align: center;
+//  -webkit-border-radius: 15px!important;
+//  -moz-border-radius: 15px!important;
+//  -ms-border-radius: 15px!important;
+//  -o-border-radius: 15px!important;
+//  border-radius: 15px!important; }
+//ngx-datatable > .m-datatable__pager > .m-datatable__pager-info {
+//  float: right;
+//  margin-top: 10px; }
+//ngx-datatable > .m-datatable__pager > .m-datatable__pager-info .m-datatable__pager-size {
+//  margin-right: 10px; }
+//ngx-datatable > .m-datatable__pager > .m-datatable__pager-info .m-datatable__pager-size .btn.dropdown-toggle {
+//  -webkit-border-radius: 20px!important;
+//  -moz-border-radius: 20px!important;
+//  -ms-border-radius: 20px!important;
+//  -o-border-radius: 20px!important;
+//  border-radius: 20px!important;
+//  height: 2.25rem;
+//  padding: 0.45rem 1rem; }
+//ngx-datatable > .m-datatable__pager > .m-datatable__pager-info .m-datatable__pager-size .dropdown-menu.inner > li.selected > a span.check-mark {
+//  margin-top: -0.6rem; }
+//ngx-datatable .m-datatable__row-detail .m-datatable__detail > .m-datatable > .m-datatable__pager {
+//  margin-top: 10px;
+//  padding: 0 20px 15px 20px; }
