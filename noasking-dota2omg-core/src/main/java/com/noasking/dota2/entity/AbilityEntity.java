@@ -1,20 +1,20 @@
 package com.noasking.dota2.entity;
 
 import lombok.Data;
-import org.springframework.data.annotation.Id;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.io.Serializable;
 
 /**
  * Created by MaJing on 2018/1/25.
  */
-@Data
 @Entity
 @Table(name = "ability")
-public class AbilityEntity {
+@Data
+public class AbilityEntity implements Serializable {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
     private String name;

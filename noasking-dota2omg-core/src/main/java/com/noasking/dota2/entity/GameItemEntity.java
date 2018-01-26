@@ -2,9 +2,7 @@ package com.noasking.dota2.entity;
 
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 
 /**
@@ -16,6 +14,7 @@ import javax.persistence.Table;
 public class GameItemEntity {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
 
     private String name;

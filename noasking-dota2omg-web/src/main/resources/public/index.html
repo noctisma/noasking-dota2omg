@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="//cdn.jsdelivr.net/sockjs/1/sockjs.min.js"></script>
+    <script src="/stomp.min.js"></script>
+</head>
+<body>
+<a class="btn btn-primary" href="#" role="button" onclick="sendMessage()">sendMessage</a>
+<script type="text/javascript">
+    function sendMessage() {
+        var socket = new SockJS('/ws'), //根据之前服务端声明的ws入口,建立ws连接
+            stompClient = Stomp.over(socket); //初始化stomp客户端
+//        stompClient.connect({}, function (frame) { //建立ws后的业务代码
+//            var jobId = Date.now();
+//            stompClient.subscribe('/topic/progress/' + jobId, function (msg) { //创建事件监听回调逻辑,收到进度通知后,更新页面
+//                console.log('Msg Received: ' + msg);
+////                var body = JSON.parse(msg.body);
+////                $('#progressModal .progress-bar').width(body.progress + '%');
+////                if (body.progress >= 100) {
+////                    $('#progressModal').modal('hide');
+////                }
+//            });
+//            stompClient.send("/sendMessage", {}, jobId); //向服务端发送开始抓取的请求
+//        });
+        stompClient.connect({}, function(frame) {
+            stompClient.subscribe('/user/topic/message', function(message) {
+                notify(message.body);
+            });
+        });
+    }
+</script>
+
+</body>
+</html>

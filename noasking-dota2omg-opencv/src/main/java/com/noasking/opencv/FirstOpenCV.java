@@ -14,9 +14,12 @@ import org.opencv.highgui.Highgui;
 import org.opencv.imgproc.Imgproc;
 import org.opencv.objdetect.CascadeClassifier;
 
+import javax.imageio.ImageIO;
+import java.io.FileInputStream;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.zip.InflaterInputStream;
 
 /**
  * Created by MaJing on 2018/1/10.
@@ -44,6 +47,7 @@ public class FirstOpenCV {
 //        ImageViewer imageViewer = new ImageViewer(tmp_img, "第一幅图片");
 //        imageViewer.imshow();
         ImageSplit.split(image);
+//        ImageIO.read(new FileInputStream("aaa")).
 
 
 //        System.out.println(image);

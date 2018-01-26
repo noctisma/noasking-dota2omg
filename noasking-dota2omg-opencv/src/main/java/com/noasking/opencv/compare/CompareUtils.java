@@ -26,6 +26,8 @@ public class CompareUtils {
 
     public static void main(String[] args) {
         try {
+
+
             Mat source = Imgcodecs.imread("D:\\var\\imgsplit\\powerAbility1_4.jpg");
             Mat target = Imgcodecs.imread("D:\\var\\imgsplit\\powerAbility1_42.jpg");
             Mat target2 = Imgcodecs.imread("D:\\var\\imgsplit\\powerAbility1_3.jpg");
@@ -37,6 +39,12 @@ public class CompareUtils {
             //算出直方圖比對,for 6種method
             for (int i = 0; i <= 5; i++) {
                 double result0 = Imgproc.compareHist(sourceHist, sourceHist, i);
+                System.out.println(System.currentTimeMillis());
+                for (int j = 0; j < 12000; j++) {
+                    Imgproc.compareHist(sourceHist, sourceHist, i);
+                }
+                System.out.println(System.currentTimeMillis());
+
                 double result1 = Imgproc.compareHist(sourceHist, targetHist, i);
                 double result2 = Imgproc.compareHist(sourceHist, target2Hist, i);
                 // double result3=Imgproc.matchShapes(src_contours.get(0), trg3_contours.get(0),  1,0);

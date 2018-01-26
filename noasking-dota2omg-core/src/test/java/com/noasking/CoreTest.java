@@ -1,6 +1,6 @@
 package com.noasking;
 
-import com.noasking.dota2.CoreApplication;
+//import com.noasking.dota2.CoreApplication;
 import com.noasking.dota2.repository.DicRepository;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -12,7 +12,7 @@ import org.springframework.test.context.junit4.SpringRunner;
  * Created by MaJing on 2018/1/25.
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = CoreApplication.class)
+//@SpringBootTest(classes = CoreApplication.class)
 public class CoreTest {
 
     @Autowired

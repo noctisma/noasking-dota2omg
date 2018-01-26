@@ -36,5 +36,14 @@ public class DicService {
         return dicEntity;
     }
 
+    /**
+     * 解析技能文件入库
+     * @param filename
+     * @return
+     */
+    public boolean parseAbility(String filename) {
+        return true;
+    }
+
 
 }

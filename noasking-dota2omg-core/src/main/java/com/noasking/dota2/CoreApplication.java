@@ -6,12 +6,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 /**
  * Created by MaJing on 2018/1/25.
  */
-@SpringBootApplication
-public class CoreApplication {
-
-    public static void main(String[] args) {
-        SpringApplication.run(CoreApplication.class, args);
-    }
-
-
-}
+//@SpringBootApplication
+//public class CoreApplication {
+//
+//    public static void main(String[] args) {
+//        SpringApplication.run(CoreApplication.class, args);
+//    }
+//
+//
+//}

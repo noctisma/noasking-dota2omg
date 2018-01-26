@@ -10,7 +10,7 @@ import java.util.Date;
  */
 @Data
 @Entity
-@Table(name = "ability")
+@Table(name = "ranking_list")
 public class RankingListEntity {
 
     @Id
