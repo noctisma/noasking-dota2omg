@@ -14,7 +14,7 @@ export class ChooseImgComponent implements OnInit, OnDestroy {
     _dataSet = [];
 
     ngOnInit() {
-        this.dataService.getAllHeroes().subscribe(
+        this.dataService.getAllHero().subscribe(
             res => {
                 console.log(res);
                 //const data = JSON.parse(res);

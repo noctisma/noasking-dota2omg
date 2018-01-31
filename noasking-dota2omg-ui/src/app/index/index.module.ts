@@ -6,8 +6,8 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {RouterModule} from '@angular/router';
 
 import {IndexComponent} from './index.component';
-import {AbilityTopComponent} from './ability-top/ability-top.component';
 import { DataService } from '../service/data.service';
+import { FileUploadModule } from 'ng2-file-upload';
 
 
 @NgModule({
@@ -17,8 +17,9 @@ import { DataService } from '../service/data.service';
         FormsModule,
         RouterModule,
         NgbModule.forRoot(),
+        FileUploadModule
     ],
-    declarations: [IndexComponent,AbilityTopComponent],
+    declarations: [IndexComponent],
     exports: [IndexComponent],
     providers: [DataService]
 })

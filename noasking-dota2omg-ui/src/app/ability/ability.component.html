@@ -26,9 +26,9 @@
                         <button class="btn btn-outline-primary" id="dropdownBasic2" ngbDropdownToggle>{{dropdownValue}}
                         </button>
                         <div ngbDropdownMenu aria-labelledby="dropdownBasic2">
-                            <button class="dropdown-item" (click)="rebuild('7天')">7天</button>
-                            <button class="dropdown-item" (click)="rebuild('一个月')">一个月</button>
-                            <button class="dropdown-item" (click)="rebuild('全部')">全部</button>
+                            <button class="dropdown-item" default (click)="rebuild('SevenDay','7天')">7天</button>
+                            <button class="dropdown-item" (click)="rebuild('Month','一个月')">一个月</button>
+                            <button class="dropdown-item" (click)="rebuild('All','全部')">全部</button>
                         </div>
                     </div>
                 </div>
@@ -52,22 +52,22 @@
                             [limit]="10"
                             [rowHeight]="auto"
                             [reorderable]="reorderable">
-                        <ngx-datatable-column name="Age">
+                        <ngx-datatable-column name="英雄" prop="name">
                             <ng-template ngx-datatable-cell-template let-value="value">
-                                <p class="text-center"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/axe_sb.png" alt="Circle Image">斧王</p>
+                                <p class="text-center"><img src="http://cdn.dota2.com/apps/dota2/images/abilities/{{value}}_sm.png" alt="Circle Image">斧王</p>
                             </ng-template>
                         </ngx-datatable-column>
-                        <ngx-datatable-column name="Name">
-                            <ng-template ngx-datatable-cell-template let-value="value">
-                                <p class="text-center">{{value}}</p>
-                            </ng-template>
-                        </ngx-datatable-column>
-                        <ngx-datatable-column name="Gender">
+                        <ngx-datatable-column name="英雄名称" prop="localizedName">
                             <ng-template ngx-datatable-cell-template let-value="value">
                                 <p class="text-center">{{value}}</p>
                             </ng-template>
                         </ngx-datatable-column>
-                        <ngx-datatable-column name="Age">
+                        <ngx-datatable-column name="胜率" prop="percent">
+                            <ng-template ngx-datatable-cell-template let-value="value">
+                                <p class="text-center">{{value}}%</p>
+                            </ng-template>
+                        </ngx-datatable-column>
+                        <ngx-datatable-column name="使用次数" prop="total">
                             <ng-template ngx-datatable-cell-template let-value="value">
                                 <p class="text-center">{{value}}</p>
                             </ng-template>

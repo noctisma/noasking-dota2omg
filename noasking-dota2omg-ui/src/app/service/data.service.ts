@@ -8,15 +8,38 @@ export class DataService {
     }
 
     /**
-     * 获取目录列表
+     * 获取英雄排行榜
+     * @param timeType
      * @returns {Int8Array|Response[]|Int16Array|Int32Array|Uint32Array|Uint16Array|any}
      */
-    getAllHeroes() {
-        return this.http.get("assets/data/heroes.json").map((response: Response) => response.json());
+    getHeroTopList(timeType: string) {
+        return this.http.get("api/getHeroTopList?timeType=" + timeType).map((response: Response) => response.json());
     }
 
-    getHerosTop() {
-        return this.http.get("assets/data/heroes-top.json").map((response: Response) => response.json());
+    /**
+     * 获取技能排行榜
+     * @param timeType
+     * @returns {Uint8Array|Float64Array|Int32Array|Uint32Array|any[]|Uint16Array|any}
+     */
+    getAbilityTopList(timeType: string) {
+        return this.http.get("api/getAbilityTopList?timeType=" + timeType).map((response: Response) => response.json());
     }
+
+    /**
+     * 获取所以英雄信息
+     * @returns {Uint8Array|Float64Array|Int32Array|Uint32Array|any[]|Uint16Array|any}
+     */
+    getAllHero() {
+        return this.http.get("api/getAllHero").map((response: Response) => response.json());
+    }
+
+    /**
+     * 获取所有技能信息
+     * @returns {Uint8Array|Float64Array|Int32Array|Uint32Array|any[]|Uint16Array|any}
+     */
+    getAllAbility() {
+        return this.http.get("api/getAllAbility").map((response: Response) => response.json());
+    }
+
 
 }

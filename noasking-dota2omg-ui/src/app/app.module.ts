@@ -14,6 +14,7 @@ import {IndexModule} from './index/index.module';
 import {HeroModule} from "./hero/hero.module";
 import {PickHelperModule} from "./pickhelper/pickhelper.module";
 import {AbilityModule} from "./ability/ability.module";
+import {HashLocationStrategy, LocationStrategy} from '@angular/common';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import {AbilityModule} from "./ability/ability.module";
         AbilityModule,
         PickHelperModule
     ],
-    bootstrap: [AppComponent]
+    bootstrap: [AppComponent],
+    providers: [{provide: LocationStrategy, useClass: HashLocationStrategy,}],
 })
 export class AppModule {
 }

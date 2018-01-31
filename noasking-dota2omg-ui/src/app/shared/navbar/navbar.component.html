@@ -11,16 +11,16 @@
         <div class="collapse navbar-collapse" id="navbarToggler">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item" *ngIf="!isDocumentation()">
-                    <a href="/index" class="nav-link"> 首页</a>
+                    <a [routerLink]="'/index'" class="nav-link"> 首页</a>
                 </li>
                 <li class="nav-item" *ngIf="!isDocumentation()">
-                    <a href="/hero" class="nav-link"> 英雄</a>
+                    <a [routerLink]="'/hero'" class="nav-link"> 英雄</a>
                 </li>
                 <li class="nav-item" *ngIf="!isDocumentation()">
-                    <a href="/ability" class="nav-link"> 技能</a>
+                    <a [routerLink]="'/ability'" class="nav-link"> 技能</a>
                 </li>
                 <li class="nav-item" *ngIf="!isDocumentation()">
-                    <a href="/pickhelper" class="nav-link"> OMG技能选择器</a>
+                    <a [routerLink]="'/pickhelper'" class="nav-link"> OMG技能选择器</a>
                 </li>
             </ul>
         </div>

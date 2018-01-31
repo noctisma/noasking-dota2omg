@@ -14,7 +14,7 @@ export class ChooseAbilityComponent implements OnInit, OnDestroy {
     _dataSet = [];
 
     ngOnInit() {
-        this.dataService.getAllHeroes().subscribe(
+        this.dataService.getAllAbility().subscribe(
             res => {
                 console.log(res);
                 //const data = JSON.parse(res);

@@ -1,6 +1,7 @@
 package com.noasking.dota2.repository;
 
 import com.noasking.dota2.entity.GameItemEntity;
+import org.springframework.cache.annotation.CacheConfig;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**

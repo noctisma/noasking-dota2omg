@@ -23,6 +23,8 @@ export class HeroComponent implements OnInit, OnDestroy {
         { name: 'Molly', gender: 'Female', company: 'Burger King' },
     ];
 
+    
+
     constructor(private dataService: DataService) {
         // this.fetch((data) => {
         //     this.rows = data;

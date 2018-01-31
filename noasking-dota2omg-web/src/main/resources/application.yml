@@ -1,5 +1,9 @@
 spring:
   profiles:
     active: dev
+  cache:
+      type: ehcache
+      ehcache:
+        config: classpath:ehcache.xml
 server:
   port: 25001

@@ -1,0 +1,6 @@
+<ehcache name="spring_boot_auto_ehcache">
+
+    <cache name="gameItem" maxElementsInMemory="1000" eternal="true" overflowToDisk="false"/>
+    <cache name="ability" maxElementsInMemory="1500" eternal="true" overflowToDisk="false"/>
+    <cache name="hero" maxElementsInMemory="150" eternal="true" overflowToDisk="false"/>
+</ehcache>

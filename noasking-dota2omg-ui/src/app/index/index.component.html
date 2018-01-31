@@ -7,7 +7,7 @@
                     <h3>Carousel</h3>
                 </div>
                 <div class="row">
-                    <div class="col-md-8 mr-auto ml-auto">
+                    <div class="col-md-12 mr-auto ml-auto">
                         <div class="card page-carousel">
                             <ngb-carousel>
                                 <ng-template ngbSlide>
@@ -34,6 +34,17 @@
                 </div>
             </div>
         </div>
-        <app-ability-top></app-ability-top>
+        <div class="section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 ml-auto mr-auto text-center file">
+                        <button class="btn btn-block btn-lg">请上传技能选择页面
+                            <input type="file" ng2FileSelect [uploader]="uploader" (change)="selectedFileOnChanged($event)" />
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 </div>

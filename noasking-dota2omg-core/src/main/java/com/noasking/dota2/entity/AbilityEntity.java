@@ -15,7 +15,7 @@ public class AbilityEntity implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    private int id;
 
     private String name;
     private String localizedName;
