@@ -1,4 +1,4 @@
-import com.noasking.dota2.ClawerDota2TestApplication;
+import com.noasking.dota2.ClawerDota2Application;
 import com.noasking.dota2.repository.DicRepository;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -11,7 +11,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
  * Created by MaJing on 2017/12/21.
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@SpringBootTest(classes = ClawerDota2TestApplication.class)
+@SpringBootTest(classes = ClawerDota2Application.class)
 public class DataInputTest {
 
     @Autowired

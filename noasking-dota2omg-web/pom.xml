@@ -13,7 +13,6 @@
 
     <properties>
         <hive.version>1.2.1</hive.version>
-        <docker.image.prefix>noasking</docker.image.prefix>
     </properties>
 
     <dependencies>
