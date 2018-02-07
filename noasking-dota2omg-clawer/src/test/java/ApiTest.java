@@ -61,7 +61,6 @@ public class ApiTest {
     @Test
     public void testGetHeroes() throws IOException {
         List<HeroEntity> heroEntities = steamDota2Api.getHeroes("zh_CN");
-
         System.out.println(heroEntities.size());
         heroRepository.save(heroEntities);
 

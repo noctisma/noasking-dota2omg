@@ -21,11 +21,11 @@
             <artifactId>noasking-dota2omg-core</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
-        <!--<dependency>-->
-            <!--<groupId>com.noasking</groupId>-->
-            <!--<artifactId>noasking-dota2omg-opencv</artifactId>-->
-            <!--<version>1.0-SNAPSHOT</version>-->
-        <!--</dependency>-->
+        <dependency>
+            <groupId>com.noasking</groupId>
+            <artifactId>noasking-dota2omg-opencv</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -42,10 +42,6 @@
             <groupId>net.sf.ehcache</groupId>
             <artifactId>ehcache</artifactId>
         </dependency>
-        <!--<dependency>-->
-            <!--<groupId>org.springframework</groupId>-->
-            <!--<artifactId>spring-messaging</artifactId>-->
-        <!--</dependency>-->
         <dependency>
             <groupId>org.apache.hadoop</groupId>
             <artifactId>hadoop-common</artifactId>

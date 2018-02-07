@@ -1,7 +1,9 @@
 package com.sugon.dota2.test;
 
 import com.noasking.dota2.WebApplication;
+import com.noasking.dota2.web.WebConst;
 import com.noasking.dota2.web.service.AbilityParseService;
+import com.noasking.dota2.web.utils.URLImageDownload;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.IOUtils;
 import org.junit.Test;
@@ -30,6 +32,12 @@ public class TestSyncAbility {
         String aaa = FileUtils.readFileToString(new File("D:\\TEMP\\aaa\\npc_abilities.txt"));
 
         abilityParseService.execute(aaa);
+    }
+
+    @Test
+    public void testDownloadAbilityImages() throws IOException {
+//        URLImageDownload.download("http://cdn.dota2.com/apps/dota2/images/abilities/centaur_hoof_stomp_lg.png", WebConst.ImagePath.ABILITY + "11.png");
+        System.out.println(abilityParseService.downloadAbilityImages(null));
     }
 
 }

@@ -145,6 +145,7 @@ public class SteamDota2Api {
         while (jsonNodeIterable.hasNext()) {
             JsonNode jsonNode = jsonNodeIterable.next();
             HeroEntity gameItem = objectMapper.readValue(jsonNode.toString(), HeroEntity.class);
+            gameItem.setName(gameItem.getName().substring(14));
             heroEntities.add(gameItem);
         }
         return heroEntities;

@@ -1,7 +1,10 @@
 package com.noasking.dota2.web.service;
 
+import com.google.common.collect.Maps;
 import com.noasking.dota2.entity.AbilityEntity;
 import com.noasking.dota2.repository.AbilityRepository;
+import com.noasking.dota2.web.WebConst;
+import com.noasking.dota2.web.utils.URLImageDownload;
 import org.apache.commons.io.IOUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -10,6 +13,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
+import java.net.MalformedURLException;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
@@ -73,6 +77,44 @@ public class AbilityParseService {
             }
         }
         logger.info("解析技能文件结束!");
+    }
+
+    /**
+     * 下载技能图片
+     *
+     * @param abilityIds 可选，如果为空，则下载全部
+     */
+    public int downloadAbilityImages(List<Integer> abilityIds) {
+        Map<Integer, String> maps = Maps.newHashMap();
+        if (abilityIds == null || abilityIds.size() == 0) {
+            List<AbilityEntity> abilityEntityList = abilityRepository.findAll();
+            for (AbilityEntity abilityEntity : abilityEntityList) {
+                maps.put(abilityEntity.getId(), abilityEntity.getName());
+            }
+        } else {
+            for (Integer id : abilityIds) {
+                AbilityEntity abilityEntity = abilityRepository.findOne(id);
+                if (abilityEntity != null) {
+                    maps.put(abilityEntity.getId(), abilityEntity.getName());
+                }
+            }
+        }
+        return downloadImages(maps);
+    }
+
+    private int downloadImages(Map<Integer, String> maps) {
+        int result = 0;
+        for (Map.Entry<Integer, String> entry : maps.entrySet()) {
+            boolean rst = URLImageDownload.download(WebConst.Dota2CdnUrl.ABILITY + entry.getValue() + "_lg.png",
+                    WebConst.ImagePath
+                            .ABILITY + entry.getKey() + "lg.png");
+            if (rst) {
+                result++;
+            }else {
+                abilityRepository.delete(entry.getKey());
+            }
+        }
+        return result;
     }
 
 }
