@@ -33,8 +33,7 @@ public class FirstOpenCV {
     }
 
     public static void main(String[] args) {
-        Mat image = Imgcodecs.imread("D:\\WorkSpace\\GitMine\\noasking-dota2omg\\noasking-dota2omg-opencv\\src\\main" +
-                "\\resources\\omg_pick.jpg");
+        Mat image = Imgcodecs.imread("D:\\TEMP\\aaa\\20180130211723_1.jpg");
         int height = image.rows();
         int width = image.cols();
         System.out.println(image.empty());
